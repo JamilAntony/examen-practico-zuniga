@@ -1,0 +1,27 @@
+<!--
+  Lab 2 — Tarea 2.1: Regla Brute Force SSH
+  Archivo: /var/ossec/etc/rules/local_rules_ssh.xml
+
+  Lógica:
+    - Se activa cuando el SID base 5716 (Failed password SSH) ocurre
+      10 o más veces desde la misma IP origen en un intervalo de 60 s.
+    - Nivel 10 = alta severidad (threshold de Wazuh para alertas críticas).
+    - Grupos: authentication_failures, brute_force → facilita búsqueda en Kibana/Grafana.
+-->
+<group name="local,ssh,">
+
+  <!--
+    Regla ID 100001: Brute Force SSH
+    frequency : cuántos eventos adicionales (sobre el 1º) deben ocurrir → 9 + 1 = 10 total
+    timeframe : ventana de tiempo en segundos
+    if_matched_sid : hereda del SID 5716 (ssh auth failure nativo de Wazuh)
+    same_source_ip : todos los eventos deben venir de la misma IP
+  -->
+  <rule id="100001" level="10" frequency="9" timeframe="60">
+    <if_matched_sid>5716</if_matched_sid>
+    <same_source_ip />
+    <description>Ataque de fuerza bruta SSH detectado desde $(srcip)</description>
+    <group>authentication_failures,brute_force</group>
+  </rule>
+
+</group>

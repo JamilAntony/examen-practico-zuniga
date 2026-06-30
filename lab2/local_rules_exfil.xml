@@ -1,0 +1,67 @@
+<!--
+  Lab 2 — Tarea 2.2: Regla Exfiltración de Datos
+  Archivo: /var/ossec/etc/rules/local_rules_exfil.xml
+
+  LÓGICA DE CORRELACIÓN (2 condiciones):
+  ─────────────────────────────────────────────────────────────────────────
+  Condición A — Transferencia masiva saliente:
+    Se dispara cuando el firewall/IDS reporta bytes_sent > 524 288 000 B
+    (500 MB) en una sola conexión desde un host interno (src_ip 10.0.0.0/8
+    o 192.168.0.0/16). Esto captura posible exfiltración de datos.
+
+  Condición B — Login exitoso fuera de horario laboral:
+    Se activa cuando existe un evento de sesión abierta (SID 5501 en Wazuh,
+    que mapea a pam_unix session opened) cuyo campo @timestamp tenga hora
+    entre 22:00 y 06:00 (UTC). La correlación con <if_matched_sid> une
+    ambas condiciones: transferencia masiva DESPUÉS de login nocturno.
+
+  La combinación de ambas eleva la severidad a nivel 14 (crítico).
+  ─────────────────────────────────────────────────────────────────────────
+
+  NOTAS DE IMPLEMENTACIÓN:
+    - En entornos reales el campo bytes_sent se extrae del decodificador
+      de firewall (iptables/pf) o de un agente de red (Zeek, Suricata).
+    - El filtro de horario se implementa con <time> en formato HH:MM–HH:MM.
+    - Para producción se recomienda añadir <same_source_ip /> y una lista
+      de IPs internas conocidas vía CDB list (<list>lists/internal_ips</list>).
+-->
+<group name="local,data_exfiltration,">
+
+  <!--
+    Regla 100010: Login SSH/PAM exitoso fuera de horario laboral (22:00-06:00)
+    Nivel intermedio (7) que sirve de "padre" para la correlación.
+    SID 5501 = pam_unix(sshd:session): session opened (Wazuh built-in).
+  -->
+  <rule id="100010" level="7">
+    <if_sid>5501</if_sid>
+    <!-- Horario fuera de jornada: de 22:00 a 06:00 -->
+    <time>22:00 - 06:00</time>
+    <description>Login exitoso fuera del horario laboral desde $(srcip)</description>
+    <group>after_hours_login</group>
+  </rule>
+
+  <!--
+    Regla 100011: Transferencia de datos saliente > 500 MB (crítico)
+    Se correlaciona con la regla 100010: sólo dispara si en la misma sesión
+    (misma IP origen, dentro de timeframe) hubo un login nocturno previo.
+    Nivel 14 = CRÍTICO en la escala Wazuh.
+  -->
+  <rule id="100011" level="14" frequency="1" timeframe="3600">
+    <!-- Correlaciona con el login nocturno previo -->
+    <if_matched_sid>100010</if_matched_sid>
+    <!-- Campo bytes_sent extraído por el decodificador de firewall/IDS -->
+    <field name="bytes_sent" type="pcre2">^([5-9]\d{8}|\d{9,})$</field>
+    <!-- Asegura que la IP origen sea la misma del login nocturno -->
+    <same_source_ip />
+    <description>
+      POSIBLE EXFILTRACIÓN DE DATOS: transferencia > 500 MB desde $(srcip)
+      luego de login fuera de horario laboral. Requiere investigación inmediata.
+    </description>
+    <group>data_exfiltration,critical,after_hours_login</group>
+    <!-- Mitre ATT&amp;CK: T1048 — Exfiltration Over Alternative Protocol -->
+    <mitre>
+      <id>T1048</id>
+    </mitre>
+  </rule>
+
+</group>
