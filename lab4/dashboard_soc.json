@@ -1,0 +1,15 @@
+{
+  "title": "SOC - Monitor de Seguridad",
+  "author": "Jamil Zuniga",
+  "panels": [
+    "V1 Severidad",
+    "V2 Top IPs",
+    "V3 Timeline",
+    "V4 Pie"
+  ],
+  "time_range": "24h",
+  "alert_rule": {
+    "condition": "count > 5",
+    "interval": "5min"
+  }
+}
