@@ -1,0 +1,797 @@
+{
+  "fecha_analisis": "2026-07-01 00:14:11",
+  "total_registros": 980,
+  "escaneo_directorios": [],
+  "sqli_detectado": [
+    {
+      "ip": "193.32.162.55",
+      "path": "/login?user=admin'--&pass=x",
+      "status": 500
+    },
+    {
+      "ip": "193.32.162.55",
+      "path": "/login?user=admin'--&pass=x",
+      "status": 500
+    },
+    {
+      "ip": "193.32.162.55",
+      "path": "/login?user=admin'--&pass=x",
+      "status": 500
+    },
+    {
+      "ip": "193.32.162.55",
+      "path": "/login?user=admin'--&pass=x",
+      "status": 500
+    }
+  ],
+  "errores_4xx_5xx_por_ip": [
+    {
+      "ip": "45.33.32.156",
+      "cantidad_errores": 47,
+      "detalle": [
+        {
+          "path": "/server-status",
+          "status": 404
+        },
+        {
+          "path": "/db.sql",
+          "status": 404
+        },
+        {
+          "path": "/contact",
+          "status": 404
+        },
+        {
+          "path": "/phpinfo.php",
+          "status": 403
+        },
+        {
+          "path": "/backup.zip",
+          "status": 404
+        }
+      ]
+    },
+    {
+      "ip": "89.210.135.99",
+      "cantidad_errores": 18,
+      "detalle": [
+        {
+          "path": "/api/v1/products",
+          "status": 404
+        },
+        {
+          "path": "/admin/dashboard",
+          "status": 500
+        },
+        {
+          "path": "/static/css/main.css",
+          "status": 500
+        },
+        {
+          "path": "/logout",
+          "status": 404
+        },
+        {
+          "path": "/favicon.ico",
+          "status": 404
+        }
+      ]
+    },
+    {
+      "ip": "122.153.40.102",
+      "cantidad_errores": 17,
+      "detalle": [
+        {
+          "path": "/static/css/main.css",
+          "status": 500
+        },
+        {
+          "path": "/profile",
+          "status": 500
+        },
+        {
+          "path": "/contact",
+          "status": 404
+        },
+        {
+          "path": "/",
+          "status": 404
+        },
+        {
+          "path": "/",
+          "status": 500
+        }
+      ]
+    },
+    {
+      "ip": "115.88.85.249",
+      "cantidad_errores": 13,
+      "detalle": [
+        {
+          "path": "/static/css/main.css",
+          "status": 500
+        },
+        {
+          "path": "/about",
+          "status": 404
+        },
+        {
+          "path": "/",
+          "status": 500
+        },
+        {
+          "path": "/images/logo.png",
+          "status": 500
+        },
+        {
+          "path": "/index.html",
+          "status": 500
+        }
+      ]
+    },
+    {
+      "ip": "185.220.101.45",
+      "cantidad_errores": 13,
+      "detalle": [
+        {
+          "path": "/favicon.ico",
+          "status": 500
+        },
+        {
+          "path": "/favicon.ico",
+          "status": 404
+        },
+        {
+          "path": "/static/js/app.js",
+          "status": 404
+        },
+        {
+          "path": "/static/css/main.css",
+          "status": 500
+        },
+        {
+          "path": "/login",
+          "status": 404
+        }
+      ]
+    },
+    {
+      "ip": "147.242.19.45",
+      "cantidad_errores": 12,
+      "detalle": [
+        {
+          "path": "/products",
+          "status": 500
+        },
+        {
+          "path": "/profile",
+          "status": 404
+        },
+        {
+          "path": "/static/js/app.js",
+          "status": 500
+        },
+        {
+          "path": "/profile",
+          "status": 404
+        },
+        {
+          "path": "/products",
+          "status": 404
+        }
+      ]
+    },
+    {
+      "ip": "91.240.118.172",
+      "cantidad_errores": 12,
+      "detalle": [
+        {
+          "path": "/profile",
+          "status": 404
+        },
+        {
+          "path": "/products",
+          "status": 500
+        },
+        {
+          "path": "/static/css/main.css",
+          "status": 404
+        },
+        {
+          "path": "/static/js/app.js",
+          "status": 404
+        },
+        {
+          "path": "/admin/dashboard",
+          "status": 500
+        }
+      ]
+    },
+    {
+      "ip": "183.17.75.31",
+      "cantidad_errores": 12,
+      "detalle": [
+        {
+          "path": "/index.html",
+          "status": 500
+        },
+        {
+          "path": "/admin/dashboard",
+          "status": 500
+        },
+        {
+          "path": "/profile",
+          "status": 500
+        },
+        {
+          "path": "/admin/dashboard",
+          "status": 500
+        },
+        {
+          "path": "/static/js/app.js",
+          "status": 404
+        }
+      ]
+    },
+    {
+      "ip": "211.75.132.82",
+      "cantidad_errores": 12,
+      "detalle": [
+        {
+          "path": "/api/v1/products",
+          "status": 404
+        },
+        {
+          "path": "/static/js/app.js",
+          "status": 500
+        },
+        {
+          "path": "/static/js/app.js",
+          "status": 404
+        },
+        {
+          "path": "/profile",
+          "status": 500
+        },
+        {
+          "path": "/api/v1/users",
+          "status": 500
+        }
+      ]
+    },
+    {
+      "ip": "198.98.54.31",
+      "cantidad_errores": 11,
+      "detalle": [
+        {
+          "path": "/static/js/app.js",
+          "status": 404
+        },
+        {
+          "path": "/about",
+          "status": 500
+        },
+        {
+          "path": "/about",
+          "status": 404
+        },
+        {
+          "path": "/login",
+          "status": 500
+        },
+        {
+          "path": "/login",
+          "status": 404
+        }
+      ]
+    },
+    {
+      "ip": "23.129.64.214",
+      "cantidad_errores": 10,
+      "detalle": [
+        {
+          "path": "/static/js/app.js",
+          "status": 500
+        },
+        {
+          "path": "/about",
+          "status": 500
+        },
+        {
+          "path": "/static/js/app.js",
+          "status": 500
+        },
+        {
+          "path": "/",
+          "status": 500
+        },
+        {
+          "path": "/images/logo.png",
+          "status": 404
+        }
+      ]
+    },
+    {
+      "ip": "37.205.19.102",
+      "cantidad_errores": 10,
+      "detalle": [
+        {
+          "path": "/static/css/main.css",
+          "status": 404
+        },
+        {
+          "path": "/index.html",
+          "status": 500
+        },
+        {
+          "path": "/static/css/main.css",
+          "status": 404
+        },
+        {
+          "path": "/images/logo.png",
+          "status": 500
+        },
+        {
+          "path": "/login",
+          "status": 404
+        }
+      ]
+    },
+    {
+      "ip": "48.228.22.68",
+      "cantidad_errores": 9,
+      "detalle": [
+        {
+          "path": "/logout",
+          "status": 500
+        },
+        {
+          "path": "/images/logo.png",
+          "status": 404
+        },
+        {
+          "path": "/about",
+          "status": 500
+        },
+        {
+          "path": "/about",
+          "status": 500
+        },
+        {
+          "path": "/",
+          "status": 500
+        }
+      ]
+    },
+    {
+      "ip": "4.214.57.107",
+      "cantidad_errores": 9,
+      "detalle": [
+        {
+          "path": "/static/js/app.js",
+          "status": 404
+        },
+        {
+          "path": "/logout",
+          "status": 500
+        },
+        {
+          "path": "/",
+          "status": 404
+        },
+        {
+          "path": "/profile",
+          "status": 404
+        },
+        {
+          "path": "/api/v1/users",
+          "status": 500
+        }
+      ]
+    },
+    {
+      "ip": "76.245.102.25",
+      "cantidad_errores": 9,
+      "detalle": [
+        {
+          "path": "/profile",
+          "status": 404
+        },
+        {
+          "path": "/index.html",
+          "status": 500
+        },
+        {
+          "path": "/static/js/app.js",
+          "status": 500
+        },
+        {
+          "path": "/login",
+          "status": 404
+        },
+        {
+          "path": "/logout",
+          "status": 500
+        }
+      ]
+    },
+    {
+      "ip": "78.159.143.216",
+      "cantidad_errores": 9,
+      "detalle": [
+        {
+          "path": "/profile",
+          "status": 500
+        },
+        {
+          "path": "/images/logo.png",
+          "status": 500
+        },
+        {
+          "path": "/images/logo.png",
+          "status": 500
+        },
+        {
+          "path": "/login",
+          "status": 404
+        },
+        {
+          "path": "/api/v1/products",
+          "status": 500
+        }
+      ]
+    },
+    {
+      "ip": "21.242.59.79",
+      "cantidad_errores": 9,
+      "detalle": [
+        {
+          "path": "/images/logo.png",
+          "status": 404
+        },
+        {
+          "path": "/logout",
+          "status": 404
+        },
+        {
+          "path": "/",
+          "status": 500
+        },
+        {
+          "path": "/profile",
+          "status": 500
+        },
+        {
+          "path": "/static/js/app.js",
+          "status": 404
+        }
+      ]
+    },
+    {
+      "ip": "68.115.137.145",
+      "cantidad_errores": 9,
+      "detalle": [
+        {
+          "path": "/contact",
+          "status": 500
+        },
+        {
+          "path": "/login",
+          "status": 404
+        },
+        {
+          "path": "/",
+          "status": 404
+        },
+        {
+          "path": "/static/css/main.css",
+          "status": 404
+        },
+        {
+          "path": "/admin/dashboard",
+          "status": 404
+        }
+      ]
+    },
+    {
+      "ip": "85.121.25.191",
+      "cantidad_errores": 9,
+      "detalle": [
+        {
+          "path": "/logout",
+          "status": 404
+        },
+        {
+          "path": "/products",
+          "status": 404
+        },
+        {
+          "path": "/favicon.ico",
+          "status": 404
+        },
+        {
+          "path": "/index.html",
+          "status": 500
+        },
+        {
+          "path": "/products",
+          "status": 404
+        }
+      ]
+    },
+    {
+      "ip": "69.190.10.87",
+      "cantidad_errores": 8,
+      "detalle": [
+        {
+          "path": "/login",
+          "status": 404
+        },
+        {
+          "path": "/",
+          "status": 404
+        },
+        {
+          "path": "/profile",
+          "status": 500
+        },
+        {
+          "path": "/login",
+          "status": 500
+        },
+        {
+          "path": "/images/logo.png",
+          "status": 404
+        }
+      ]
+    },
+    {
+      "ip": "106.116.31.216",
+      "cantidad_errores": 8,
+      "detalle": [
+        {
+          "path": "/products",
+          "status": 500
+        },
+        {
+          "path": "/static/js/app.js",
+          "status": 404
+        },
+        {
+          "path": "/products",
+          "status": 404
+        },
+        {
+          "path": "/logout",
+          "status": 500
+        },
+        {
+          "path": "/admin/dashboard",
+          "status": 404
+        }
+      ]
+    },
+    {
+      "ip": "179.50.116.35",
+      "cantidad_errores": 8,
+      "detalle": [
+        {
+          "path": "/admin/dashboard",
+          "status": 404
+        },
+        {
+          "path": "/logout",
+          "status": 500
+        },
+        {
+          "path": "/api/v1/products",
+          "status": 404
+        },
+        {
+          "path": "/admin/dashboard",
+          "status": 500
+        },
+        {
+          "path": "/about",
+          "status": 404
+        }
+      ]
+    },
+    {
+      "ip": "207.34.44.100",
+      "cantidad_errores": 8,
+      "detalle": [
+        {
+          "path": "/login",
+          "status": 500
+        },
+        {
+          "path": "/logout",
+          "status": 404
+        },
+        {
+          "path": "/index.html",
+          "status": 500
+        },
+        {
+          "path": "/static/css/main.css",
+          "status": 404
+        },
+        {
+          "path": "/logout",
+          "status": 404
+        }
+      ]
+    },
+    {
+      "ip": "134.214.243.147",
+      "cantidad_errores": 7,
+      "detalle": [
+        {
+          "path": "/admin/dashboard",
+          "status": 404
+        },
+        {
+          "path": "/about",
+          "status": 500
+        },
+        {
+          "path": "/api/v1/users",
+          "status": 500
+        },
+        {
+          "path": "/about",
+          "status": 500
+        },
+        {
+          "path": "/favicon.ico",
+          "status": 500
+        }
+      ]
+    },
+    {
+      "ip": "100.94.189.227",
+      "cantidad_errores": 6,
+      "detalle": [
+        {
+          "path": "/favicon.ico",
+          "status": 404
+        },
+        {
+          "path": "/favicon.ico",
+          "status": 404
+        },
+        {
+          "path": "/static/css/main.css",
+          "status": 500
+        },
+        {
+          "path": "/",
+          "status": 404
+        },
+        {
+          "path": "/static/css/main.css",
+          "status": 404
+        }
+      ]
+    },
+    {
+      "ip": "121.250.135.24",
+      "cantidad_errores": 6,
+      "detalle": [
+        {
+          "path": "/api/v1/products",
+          "status": 404
+        },
+        {
+          "path": "/logout",
+          "status": 404
+        },
+        {
+          "path": "/products",
+          "status": 500
+        },
+        {
+          "path": "/logout",
+          "status": 500
+        },
+        {
+          "path": "/about",
+          "status": 404
+        }
+      ]
+    },
+    {
+      "ip": "142.166.141.134",
+      "cantidad_errores": 6,
+      "detalle": [
+        {
+          "path": "/images/logo.png",
+          "status": 500
+        },
+        {
+          "path": "/index.html",
+          "status": 500
+        },
+        {
+          "path": "/images/logo.png",
+          "status": 404
+        },
+        {
+          "path": "/products",
+          "status": 404
+        },
+        {
+          "path": "/admin/dashboard",
+          "status": 500
+        }
+      ]
+    },
+    {
+      "ip": "193.32.162.55",
+      "cantidad_errores": 4,
+      "detalle": [
+        {
+          "path": "/login?user=admin'--&pass=x",
+          "status": 500
+        },
+        {
+          "path": "/login?user=admin'--&pass=x",
+          "status": 500
+        },
+        {
+          "path": "/login?user=admin'--&pass=x",
+          "status": 500
+        },
+        {
+          "path": "/login?user=admin'--&pass=x",
+          "status": 500
+        }
+      ]
+    },
+    {
+      "ip": "50.64.21.109",
+      "cantidad_errores": 4,
+      "detalle": [
+        {
+          "path": "/static/css/main.css",
+          "status": 404
+        },
+        {
+          "path": "/contact",
+          "status": 500
+        },
+        {
+          "path": "/api/v1/users",
+          "status": 500
+        },
+        {
+          "path": "/static/js/app.js",
+          "status": 500
+        }
+      ]
+    },
+    {
+      "ip": "145.51.146.223",
+      "cantidad_errores": 4,
+      "detalle": [
+        {
+          "path": "/api/v1/users",
+          "status": 404
+        },
+        {
+          "path": "/contact",
+          "status": 500
+        },
+        {
+          "path": "/api/v1/users",
+          "status": 404
+        },
+        {
+          "path": "/favicon.ico",
+          "status": 500
+        }
+      ]
+    }
+  ]
+}
